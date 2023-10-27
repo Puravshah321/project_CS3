@@ -32,33 +32,25 @@
     <span></span>
     <button type="button" class="playcard" onclick="opencard()">Settings</button>
 	 <div class="popup" id="popup">
-		Thankyou
-	 <button type="button" onclick="closecard()">Back</button>	
-	
+		<p>Thankyou</p>
+	 <button type="button" onclick="closecard()">Close</button>	
+	 </div>
+	 
 	 <script>
-		let popup= document.getElementById("popup");
-		
-		function opencard(){
-		  popup.classList.add("open-popup");
-		}
-  
-		function closecard(){
-		  popup.classList.remove("open-popup");
-		}
-	   </script> 
-	</div>
+	  let popup= document.getElementById("popup");
+	  
+	  function opencard(){
+	    popup.classList.add("open-popup");
+	  }
+	 </script>
 	</a>
 	
-	<a class="button" href="#" style="--color: #ff18be;">
+	<a class="button" href="#" style="--color: #ff1867;">
     <span></span>
     <span></span>
     <span></span>
     <span></span>
-	<button type="button" class="playcard" onclick="opencard()">Guide</button>
-	<div class="popup" id="popup">
-	   Thankyou
-	<button type="button" onclick="closecard()">Back</button>	
-	</div>
+    Guide
 	</a>
 	
 	<a class="button" href="#" style="--color: #fff01f;">
@@ -66,11 +58,7 @@
     <span></span>
     <span></span>
     <span></span>
-    <button type="button" class="playcard" onclick="opencard()">Feedback</button>
-	 <div class="popup" id="popup">
-		Thankyou
-	 <button type="button" onclick="closecard()">Back</button>	
-	 </div>
+    Feedback
 	</a>
 	
 	<a class="button" href="#" style="--color: #6eff3e;">
@@ -78,14 +66,17 @@
     <span></span>
     <span></span>
     <span></span>
-    <button type="button" class="playcard" onclick="opencard()">Sign up</button>
-	 <div class="popup" id="popup">
-		Thankyou
-		
-	 <button type="button" onclick="closecard()">Back</button>	
-	 </div>
+    Sign Up
 	</a>
+
 	</div>
+<!--	
+<div class="bg_grid_item">1</div>
+<div class="bg_grid_item">2</div>
+<div class="bg_grid_item">3</div>
+	</div>	
+-->
+
 </div>
 	
 </body>

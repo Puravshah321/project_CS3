@@ -14,6 +14,7 @@ body
 .playcard
 {
 	padding: 10px 10px;
+	background: black;
 	border: 0px;
 	outline: none;
 	cursor: pointer;
@@ -26,25 +27,21 @@ body
 .popup
 {
 	width: 400px;
-	height: 450px;
-	background: var(--color);
+	background: white;
 	border-radius: 6px;
 	position: absolute;
 	top: 0%;
 	left: 500px;
 	transform: translate(-50%,-50%) scale(0.1);
 	text-align:center;
-	font-size: 30px;
-	font-family: Georgia, 'Times New Roman', Times, serif;
 	padding: 0px 30px 30px;
-	color: black;
+	color:blue;
 	visibility:hidden;
-	transition: transform 0.4s, top 0.4s;
 }
 
 .open-popup{
 	visibility:visible;
-	top: -250px;
+	top: 50%;
 	transform: translate(-50%,-50%) scale(1);
 }
 
