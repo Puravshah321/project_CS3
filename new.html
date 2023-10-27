@@ -1,0 +1,107 @@
+<html>
+<head>	
+	<title>Home Page</title>
+    <link rel="stylesheet" href="new.css" > 
+
+</head>
+
+<body>
+	<p class="title_color">Chain Reaction</p>
+    <hr id="line"></hr>
+	
+    
+
+   <div class="container1">
+    <a class="button1" href="#" style="--color:#da1eff;">
+       <p class="play">Play</p>
+        </a>
+
+   </div>
+		
+	<div class="container">
+	<a class="button" href="#" style="--color:#1e9bff;">
+    <button type="button" class="playcard" onclick="opencard()">Settings</button>
+	 <div class="popup" id="popup">
+		Thankyou
+	 <button type="button" onclick="closecard()">Back</button>
+    </div>
+    </a>
+
+    <script>
+		let popup= document.getElementById("popup");
+		
+		function opencard(){
+		  popup.classList.add("open-popup");
+		}
+  
+		function closecard(){
+		  popup.classList.remove("open-popup");
+        }
+    </script>    
+
+    <a class="button" href="#" style="--color: #ff1867;">
+    <button type="button" class="playcard" onclick="opencard()">Guide</button>
+	 <div class="popup" id="popup">
+		Thankyou
+     <button type="button" onclick="closecard()">Back</button>
+    </div>
+    </a>
+
+    <script>
+		let popup= document.getElementById("popup");
+		
+		function opencard(){
+		  popup.classList.add("open-popup");
+		}
+  
+		function closecard(){
+		  popup.classList.remove("open-popup");
+        }
+    </script>
+  
+	
+	<a class="button" href="#" style="--color: #fff01f;">
+    <button type="button" class="playcard" onclick="opencard()">Feedback</button>
+     <div class="popup" id="popup">
+           Thankyou
+     <button type="button" onclick="closecard()">Back</button>
+    </div>
+    </a>
+
+    <script>
+		let popup= document.getElementById("popup");
+		
+		function opencard(){
+		  popup.classList.add("open-popup");
+		}
+  
+		function closecard(){
+		  popup.classList.remove("open-popup");
+        }
+    </script>
+	
+    <a class="button" href="#" style="--color: #6eff3e;">
+    <button type="button" class="playcard" onclick="opencard()">Sign up</button>
+        <div class="popup" id="popup">
+             Thankyou
+        <button type="button" onclick="closecard()">Back</button>
+    </div>
+    </a>
+
+    <script>
+		let popup= document.getElementById("popup");
+		
+		function opencard(){
+		  popup.classList.add("open-popup");
+		}
+  
+		function closecard(){
+		  popup.classList.remove("open-popup");
+        }
+    </script>
+</div>
+
+
+
+</body>
+</html>
