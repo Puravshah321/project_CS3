@@ -20,88 +20,96 @@
 		
 	<div class="container">
 	<a class="button" href="#" style="--color:#1e9bff;">
-    <button type="button" class="playcard" onclick="opencard()">Settings</button>
-	 <div class="popup" id="popup">
+    <button type="button" class="playcard1" onclick="opencard1()">Settings</button>
+	 <div class="popup1" id="popup1">
 		Thankyou
-	 <button type="button" onclick="closecard()">Back</button>
+	 <button type="button" onclick="closecard1()">Back</button>
     </div>
     </a>
 
     <script>
-		let popup= document.getElementById("popup");
+		let popup1 = document.getElementById("popup1");
 		
-		function opencard(){
-		  popup.classList.add("open-popup");
+		function opencard1()
+    {
+		  popup1.classList.add("open-popup1");
 		}
   
-		function closecard(){
-		  popup.classList.remove("open-popup");
-        }
+		function closecard1()
+    {
+		  popup1.classList.remove("open-popup1");
+    }
     </script>    
 
     <a class="button" href="#" style="--color: #ff1867;">
-    <button type="button" class="playcard" onclick="opencard()">Guide</button>
-	 <div class="popup" id="popup">
-		Thankyou
-     <button type="button" onclick="closecard()">Back</button>
+    <button type="button" class="playcard2" onclick="opencard2()">Guide</button>
+	  <div class="popup2" id="popup2">
+		Thankyou2
+     <button type="button" onclick="closecard2()">Back</button>
     </div>
     </a>
 
     <script>
-		let popup= document.getElementById("popup");
-		
-		function opencard(){
-		  popup.classList.add("open-popup");
-		}
-  
-		function closecard(){
-		  popup.classList.remove("open-popup");
-        }
+      let popup2 = document.getElementById("popup2");  
+      function opencard2()
+      {
+        popup2.classList.add("open-popup2");
+      }
+    
+      function closecard2()
+      {
+        popup2.classList.remove("open-popup2");
+      }
     </script>
-  
-	
-	<a class="button" href="#" style="--color: #fff01f;">
-    <button type="button" class="playcard" onclick="opencard()">Feedback</button>
-     <div class="popup" id="popup">
-           Thankyou
-     <button type="button" onclick="closecard()">Back</button>
+
+	  <a class="button" href="#" style="--color: #fff01f;">
+    <button type="button" class="playcard3" onclick="opencard3()">Feedback</button>
+     <div class="popup3" id="popup3">
+           Thankyou3
+     <button type="button" onclick="closecard3()">Back</button>
     </div>
     </a>
-
     <script>
-		let popup= document.getElementById("popup");
+		let popup3 = document.getElementById("popup3");
 		
-		function opencard(){
-		  popup.classList.add("open-popup");
+		function opencard3()
+    {
+		  popup3.classList.add("open-popup3");
 		}
   
-		function closecard(){
-		  popup.classList.remove("open-popup");
-        }
-    </script>
-	
+		function closecard3()
+    {
+		  popup3.classList.remove("open-popup3");
+    }
+    </script>    
+
     <a class="button" href="#" style="--color: #6eff3e;">
-    <button type="button" class="playcard" onclick="opencard()">Sign up</button>
-        <div class="popup" id="popup">
-             Thankyou
-        <button type="button" onclick="closecard()">Back</button>
+    <button type="button" class="playcard4" onclick="opencard4()">Sign up</button>
+        <div class="popup4" id="popup4">
+             Thankyou4
+        <button type="button" onclick="closecard4()">Back</button>
     </div>
     </a>
 
     <script>
-		let popup= document.getElementById("popup");
-		
-		function opencard(){
-		  popup.classList.add("open-popup");
-		}
-  
-		function closecard(){
-		  popup.classList.remove("open-popup");
-        }
-    </script>
+      let popup4 = document.getElementById("popup4");
+      
+      function opencard4()
+      {
+        popup4.classList.add("open-popup4");
+      }
+    
+      function closecard4()
+      {
+        popup4.classList.remove("open-popup4");
+      }
+    </script>    
+    
+
+
+    
+
 </div>
-
-
 
 </body>
 </html>
