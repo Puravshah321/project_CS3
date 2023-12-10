@@ -23,7 +23,7 @@
     <button type="button" class="playcard1" onclick="opencard1()">Settings</button>
 	 <div class="popup1" id="popup1">
 		Thankyou
-	 <button type="button" onclick="closecard1()">Back</button>
+	 <button type="button" class="button_back" onclick="closecard1()">Back</button>
     </div>
     </a>
     
@@ -45,8 +45,46 @@
     <!--Playcard 2-->  
     <button type="button" class="playcard2" onclick="opencard2()">Guide</button>
 	  <div class="popup2" id="popup2">
-		Thankyou2
-     <button type="button" onclick="closecard2()">Back</button>
+      <p class="Rules">
+        <b><u><i>HOW TO PLAY</i></u></b><br></br>
+        <i><u><b>RULE NO. 1</b><br></u></i>
+        The gameplay takes place in an m times n (𝑚 × 𝑛) board.
+        <br></br>
+        
+        <i><u><b>RULE NO. 2</b><br></u></i>
+        For each cell in the board, we define a critical mass. The critical mass is equal to
+        the number of orthogonally adjacent cells. That would be 4 for usual cells, 3 for
+        cells in the edge and 2 for cells in the corner.
+        <br></br>
+
+        
+        <i><u><b>RULE NO. 3</b><br></u></i>
+        All cells are initially empty. The Red and the Green player take turns to place
+        "orbs" of their corresponding colors. The Red player can only place an (red) orb in
+        an empty cell or a cell which already contains one or more red orbs. When two
+        or more orbs are placed in he same cell, they stack up.
+        <br></br>
+
+        
+        <i><u><b>RULE NO. 4</b><br></u></i>
+        When a cell is loaded with a number of orbs equal to its critical mass, the stack
+        immediately explodes. As a result of the explosion, to each of the orthogonally
+        adjacent ells, an orb is added and the initial cell looses as many orbs as its
+        critical mass. The explosions might result in overloading of an adjacent cell and
+        the chain reaction of explosion continues until every cell is stable.
+        <br></br>
+
+        
+        <i><u><b>RULE NO. 5</b><br></u></i>
+        When a red cell explodes and there are green cells around, the green cells are
+        converted to red and the other rules of explosions still follow. The same rule is
+        applicable for other colors
+        <br></br>
+
+        <i><u><b>RULE NO. 6</b><br></u></i>
+        The winner is the one who eliminates every other player's orbs.
+      </p>
+     <button type="button" class="button_back" onclick="closecard2()"> <-- </button>
     </div>
     </a>
 
@@ -64,11 +102,73 @@
     </script>
 
 	  <a class="button" href="#" style="--color: #faee46;">
+    
+    
     <!--Playcard 3-->  
     <button type="button" class="playcard3" onclick="opencard3()">Feedback</button>
      <div class="popup3" id="popup3">
-           Thankyou3
-     <button type="button" onclick="closecard3()">Back</button>
+      
+      <div id="panel" class="panel-container">
+        <strong>How was your experience with playing this game?</strong>
+        <div class="ratings-container">
+          <div class="rating">
+            <img src="https://img.icons8.com/external-neu-royyan-wijaya/64/000000/external-emoji-neumojis-smiley-neu-royyan-wijaya-17.png" alt="">
+            <small>Unhappy</small>
+          </div>
+  
+          <div class="rating">
+            <img src="https://img.icons8.com/external-neu-royyan-wijaya/64/000000/external-emoji-neumojis-smiley-neu-royyan-wijaya-3.png" alt=""/>
+            <small>Neutral</small>
+          </div>
+  
+          <div class="rating active">
+            <img src="https://img.icons8.com/external-neu-royyan-wijaya/64/000000/external-emoji-neumojis-smiley-neu-royyan-wijaya-30.png" alt=""/>
+            <small>Satisfied</small>
+          </div>
+        </div>
+        <button class="btn" id="send">Send Review</button>
+      </div>
+      <script>
+        const ratings = document.querySelectorAll('.rating')
+const ratingsContainer = document.querySelector('.ratings-container')
+const sendBtn = document.querySelector('#send')
+const panel = document.querySelector('#panel')
+let selectedRating = 'Satisfied'
+
+ratingsContainer.addEventListener('click', (e) => {
+    if(e.target.parentNode.classList.contains('rating') && e.target.nextElementSibling) {
+        removeActive()
+        e.target.parentNode.classList.add('active')
+        selectedRating = e.target.nextElementSibling.innerHTML
+    } else if(
+        e.target.parentNode.classList.contains('rating') &&
+        e.target.previousSibling &&
+        e.target.previousElementSibling.nodeName === 'IMG'
+    ) {
+        removeActive()
+        e.target.parentNode.classList.add('active')
+        selectedRating = e.target.innerHTML
+    }
+
+})
+
+sendBtn.addEventListener('click', (e) => {
+    panel.innerHTML = `
+        <i class="fas fa-heart"></i>
+        <br>
+        <strong>Feedback: ${selectedRating}</strong>
+        <h6>Thank you for responding we'll take your feedback into consideration! </h6>
+    `
+})
+
+function removeActive() {
+    for(let i = 0; i < ratings.length; i++) {
+        ratings[i].classList.remove('active')
+    }
+}
+      </script>
+      
+    <button type="button" class="button_back" onclick="closecard3()">Back</button>
     </div>
     </a>
     <script>
@@ -86,11 +186,26 @@
     </script>    
 
     <a class="button" href="#" style="--color: #8fff6a;">
+
     <!--Playcard 4-->  
     <button type="button" class="playcard4" onclick="opencard4()">Sign up</button>
         <div class="popup4" id="popup4">
-             Thankyou4
-        <button type="button" onclick="closecard4()">Back</button>
+          <form>
+            <fieldset>
+              <legend><u><i><b>Feedback:</b></i></u></legend>
+              <br>
+            <label for="fname" class="feeback" >Username: </label>
+            <input type="text" placeholder="Enter your name" ><br><br>
+    
+            <label for="lname">Password:  </label>
+            <input type="password" placeholder="Set strong password"><br><br>
+            
+            <textarea rows="10" cols="40" placeholder="Tell us your views regarding this game"></textarea>
+          </fieldset>  
+            
+            <input type="submit" value="Submit">
+          </form> 
+        <button type="button" class="button_back" onclick="closecard4()">Back</button>
     </div>
     </a>
 
@@ -109,8 +224,6 @@
     </script>    
     
 
-
-    
 
 </div>
 
