@@ -11,7 +11,7 @@
 
    <div class="container1">
 
-    <a class="button1" href="#" style="--color:#da1eff;">
+    <a class="button1" href="categories.html" style="--color:#da1eff;">
        <p class="play">Play</p>
         </a>
 
@@ -24,31 +24,35 @@
 	 <div class="popup1" id="popup1">
     <form>
       &#x2699; <u>Settings</u>
-      <br><br>
+      <br></br><br>
 
-      <label for="video quality">Video quality</label>
+      <label for="video quality"  style="color:black ; font-family: sans-serif;">Video quality</label>
             <input type="checkbox" >
             <label for="check"> Low</label>
             <input type="checkbox" >
             <label for="check"> High</label>
-            <br></br>
+            <br></br><br>
 
       
       <label for="music" style="color:black ; font-family: sans-serif;">Music </label>
             <input type="range" min="0" max="100" value="30" class="slider" id="myRange">
-        <br>
+        <br></br><br>
         
-      <label for="sound" style="color:black ; font-family: sans-serif;">Sound</label><br>      
+      <label for="music" style="color:black ; font-family: sans-serif;">Sound </label>
+        <input type="range" min="0" max="100" value="70" class="slider" id="myRange">
+        <br></br>
+        
+       <!--
+      <label for="sound" style="color:black ; font-family: sans-serif; height: 100px; width: 75px;">Sound</label><br>      
             <audio id="myAudio">
               <source src="audiogame.mp3" type="audio/mpeg">
               Your browser does not support the audio element.
             </audio>
-           <div id="audio-container">
+           <div class="audio-container">
             <audio id="audio-player" controls>
                 Your browser does not support the audio element.
             </audio>
-        </div>
-       <!--  
+        </div>  
         <script>
             document.addEventListener('DOMContentLoaded', function () {
         // Get the audio element
@@ -81,8 +85,9 @@
     
         </script>
       -->
-      
+
     </form>
+    <br></br>
 	 <button type="button" class="button_back" onclick="closecard1()"> <--</button>
     </div>
     </a>
@@ -259,7 +264,7 @@ function removeActive() {
         <div class="popup4" id="popup4">
           <form>
             <fieldset>
-              <legend><i><b>Sign Up</b></i></legend>
+              <legend><i><b><u>Sign Up</u>/b></i></legend>
               <br>
             <label for="fname" class="feeback" >Username: </label>
             <input type="text" placeholder="Enter your name" ><br><br>
@@ -280,7 +285,7 @@ function removeActive() {
           </fieldset>  
           <button class="btn" id="send">Register</button>
           </form> 
-          <br>
+          <br></br>
         <button type="button" class="button_back" onclick="closecard4()"> <-- </button>
     </div>
     </a>
@@ -297,11 +302,7 @@ function removeActive() {
       {
         popup4.classList.remove("open-popup4");
       }
-    </script>    
-    
-
-
+    </script>        
 </div>
-
 </body>
 </html>
