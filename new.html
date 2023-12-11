@@ -107,7 +107,7 @@
     <!--Playcard 3-->  
     <button type="button" class="playcard3" onclick="opencard3()">Feedback</button>
      <div class="popup3" id="popup3">
-      
+  
       <div id="panel" class="panel-container">
         <strong>How was your experience with playing this game?</strong>
         <div class="ratings-container">
@@ -192,20 +192,32 @@ function removeActive() {
         <div class="popup4" id="popup4">
           <form>
             <fieldset>
-              <legend><u><i><b>Feedback:</b></i></u></legend>
+              <legend><i><b>Sign Up</b></i></legend>
               <br>
             <label for="fname" class="feeback" >Username: </label>
             <input type="text" placeholder="Enter your name" ><br><br>
+              
+            <label for="Birthday" class="feeback" >Date Of Birth: </label>
+            <input type="date" id="birthday" placeholder="Enter Your birthday"><br><br>
+
+            <label for="email">Email:  </label>
+            <input type="email" placeholder="Enter Email"><br><br>
     
             <label for="lname">Password:  </label>
             <input type="password" placeholder="Set strong password"><br><br>
             
-            <textarea rows="10" cols="40" placeholder="Tell us your views regarding this game"></textarea>
+            <input type="checkbox" >
+            <label for="check" >By creating an account you agree to our Term&condition</label>
+            
           </fieldset>  
             
-            <input type="submit" value="Submit">
-          </form> 
-        <button type="button" class="button_back" onclick="closecard4()">Back</button>
+            <input type="submit" value="Submit" style="margin-top:1em; font-size: 20px; border-radius: 7px; color:white; background-color:black;">
+            
+            
+          </form>  
+          <p style="margin-top:12px ;"></p>
+        <button type="button" class="button_back" onclick="closecard4()" 
+        style="font-size: 20px; border-radius: 7px; color:black; background-color:white;">Back</button>
     </div>
     </a>
 
