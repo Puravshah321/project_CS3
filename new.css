@@ -8,6 +8,7 @@
 .title_color
 {
   background-image: linear-gradient(rgb(26,248,248),rgba(30,9,9,0));
+  
 }
 
 
@@ -102,13 +103,13 @@ p
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top:15em;
+  margin-top:8em;
   background:black;
 }
 .container 
 {
   width: 100%;
- margin-top:15em ;
+ margin-top:10em ;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -185,6 +186,7 @@ p
   cursor: pointer;
   padding: 1px;
   margin: 20px 10px 30px 25px;
+  
 }
 
 .rating:hover,
@@ -238,6 +240,8 @@ label
 {
   font-size: 17px;
   font-family: 'Times New Roman', Times, serif;
+  color:brown;
+  
 
 }
 
@@ -301,5 +305,6 @@ label
     0 0 50px var(--color),
     0 0 100px var(--color);
   transition: 0.5s ease-in-out;
-  transition-delay: 0.1s;
+  transition-delay: 0.1s;
 }
+
