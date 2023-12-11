@@ -103,13 +103,13 @@ p
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top:8em;
+  margin-top:14em;
   background:black;
 }
 .container 
 {
   width: 100%;
- margin-top:10em ;
+  margin-top:10em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -158,9 +158,47 @@ p
 {
   font-size: 15px;
 }
-*/
-.panel-container {
 
+.slider {
+  -webkit-appearance: none;
+  width: 200px;
+  height: 10px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: black;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: black;
+  cursor: pointer;
+}
+*/
+#audio-container {
+  max-width: 175px;
+  margin: 15px;
+}
+
+.panel-container {
   box-shadow: 0 0 0px rgba(0, 0, 0, 0.3);
   font-size: 90%;
   display: flex;
@@ -169,22 +207,24 @@ p
   align-items: center;
   text-align: center;
   padding: 30px;
-  max-width: 250px;
+  max-width: 325px;
 }
 
 .panel-container strong {
-  font-size: 20px;
+  font-size: 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .ratings-container {
   display: flex;
-  margin: 20px 0;
+  align-items: center;
+  margin: 20px;
 }
 
 .rating {
   flex: 1;
+  align-items: center;
   cursor: pointer;
-  padding: 1px;
   margin: 20px 10px 30px 25px;
   
 }
@@ -196,6 +236,7 @@ p
 }
 
 .rating img {
+  margin: 15px;
   width: 30px;
   height: 30px;
 }
@@ -220,6 +261,7 @@ p
   border-radius: 4px;
   padding: 12px 30px;
   cursor: pointer;
+  max-width: 500px;
 }
 
 .btn:focus {
@@ -307,4 +349,3 @@ label
   transition: 0.5s ease-in-out;
   transition-delay: 0.1s;
 }
-
