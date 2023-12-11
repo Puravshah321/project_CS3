@@ -22,8 +22,68 @@
     <!--Playcard 1-->  
     <button type="button" class="playcard1" onclick="opencard1()">Settings</button>
 	 <div class="popup1" id="popup1">
-		Thankyou
-	 <button type="button" class="button_back" onclick="closecard1()">Back</button>
+    <form>
+      &#x2699; <u>Settings</u>
+      <br><br>
+
+      <label for="video quality">Video quality</label>
+            <input type="checkbox" >
+            <label for="check"> Low</label>
+            <input type="checkbox" >
+            <label for="check"> High</label>
+            <br></br>
+
+      
+      <label for="music" style="color:black ; font-family: sans-serif;">Music </label>
+            <input type="range" min="0" max="100" value="30" class="slider" id="myRange">
+        <br>
+        
+      <label for="sound" style="color:black ; font-family: sans-serif;">Sound</label><br>      
+            <audio id="myAudio">
+              <source src="audiogame.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+           <div id="audio-container">
+            <audio id="audio-player" controls>
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+       <!--  
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+        // Get the audio element
+        var audioPlayer = document.getElementById('audio-player');
+    
+        // Create an array of audio sources
+        var audioSources = [
+            'audiogame.mp3',
+            'audiogame.mp3',
+            'audiogame.mp3',
+        ];
+    
+        // Set the initial source
+        audioPlayer.src = audioSources[0];
+    
+        // Function to change the audio source dynamically
+        function changeAudioSource(index) {
+            if (index >= 0 && index < audioSources.length) {
+                audioPlayer.src = audioSources[index];
+                audioPlayer.load();
+                audioPlayer.play();
+            }
+        }
+            
+        });
+    
+        // Add the button to the document
+        document.getElementById('audio-container').appendChild(nextButton);
+    });
+    
+        </script>
+      -->
+      
+    </form>
+	 <button type="button" class="button_back" onclick="closecard1()"> <--</button>
     </div>
     </a>
     
@@ -109,8 +169,10 @@
      <div class="popup3" id="popup3">
   
       <div id="panel" class="panel-container">
+       
         <strong>How was your experience with playing this game?</strong>
         <div class="ratings-container">
+
           <div class="rating">
             <img src="https://img.icons8.com/external-neu-royyan-wijaya/64/000000/external-emoji-neumojis-smiley-neu-royyan-wijaya-17.png" alt="">
             <small>Unhappy</small>
@@ -126,8 +188,13 @@
             <small>Satisfied</small>
           </div>
         </div>
-        <button class="btn" id="send">Send Review</button>
-      </div>
+        <form>
+          <label for="review" style="color:black; background-color:rgba(228, 129, 22, 0.492);">Your review :</label>
+          <textarea id="review" name="review" rows="3" cols="48" placeholder="Tell us your experience while playing this game......"></textarea>
+          </form>
+          <br>
+      <button class="btn" id="send">Send Review</button>
+    </div>  
       <script>
         const ratings = document.querySelectorAll('.rating')
 const ratingsContainer = document.querySelector('.ratings-container')
@@ -168,7 +235,7 @@ function removeActive() {
 }
       </script>
       
-    <button type="button" class="button_back" onclick="closecard3()">Back</button>
+    <button type="button" class="button_back" onclick="closecard3()"> <-- </button>
     </div>
     </a>
     <script>
@@ -207,17 +274,14 @@ function removeActive() {
             <input type="password" placeholder="Set strong password"><br><br>
             
             <input type="checkbox" >
-            <label for="check" >By creating an account you agree to our Term&condition</label>
+            <label for="check" style="color:black; font-family: algerian; font-size: 15px;" > 
+            By creating an account you agree to our <u>Terms & conditions</u><br></label>
             
           </fieldset>  
-            
-            <input type="submit" value="Submit" style="margin-top:1em; font-size: 20px; border-radius: 7px; color:white; background-color:black;">
-            
-            
-          </form>  
-          <p style="margin-top:12px ;"></p>
-        <button type="button" class="button_back" onclick="closecard4()" 
-        style="font-size: 20px; border-radius: 7px; color:black; background-color:white;">Back</button>
+          <button class="btn" id="send">Register</button>
+          </form> 
+          <br>
+        <button type="button" class="button_back" onclick="closecard4()"> <-- </button>
     </div>
     </a>
 
