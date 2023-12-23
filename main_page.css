@@ -18,9 +18,10 @@ a:hover
 }
 body
 {
-	background-color:black;
-/*	background-image:url("fire.jpeg");
-	background-repeat:no-repeat; */
+	background-color: black;
+	background-image:url("firebg.jpg");
+	background-size:cover;
+	margin: 0; 
 	color:rgb(30,250,30);
 	font-family:arial;
 }
@@ -45,7 +46,7 @@ margin-bottom:20px;
 }
 h1,footer
 {
-	font-family:Algerian;
+	font-family:Vendana;
 	text-align:center;	
 	color:rgb(170,170,30);
 	font-size:50px;
@@ -84,7 +85,7 @@ sub
 #left div:hover
 {
 	color:black;
-	background-color:rgb(200,250,30);
+	background-color:rgb(243, 244, 241);
 	cursor:pointer;
 }
 #ResultContainer
