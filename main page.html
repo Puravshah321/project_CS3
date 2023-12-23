@@ -18,7 +18,7 @@
 </div>
 <div id="left">
 <div id="newGame" onClick="init();">New Game</div>
-<div id="newGame">Home Page</div>
+<a href="home_page.html"><div id="newGame">Home Page</div></a>
 </div> 
 <div id="container">
 <header>
@@ -28,7 +28,40 @@
 <canvas id="chainReaction" width="700px" height="700px">
 </canvas>
 </div>
+<audio id="firesound" loop>
+	<source src="firesound.mp3" type="audio/mp3">
+	Your browser does not support the audio tag.
+</audio>
+<button onclick="togglesound()" >Sound</button>
 <script>
+	var sound = document.getElementById('firesound');
+
+	function playsound()
+	{
+		sound.play();
+	}
+	function pausesound()
+	{
+		sound.pause();
+	}
+	/*document.addEventListener("click", function()
+	 {
+        playsound();
+     });*/
+
+	function togglesound()
+	{
+		if(sound.paused)
+		{
+			playsound();
+		}
+		else
+		{
+            pausesound();
+		}
+	} 
+
+	
 //Canvas Context
 var ctx,c;
 var BOX_SIZE=100; // Each Box Size
