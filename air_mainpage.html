@@ -69,8 +69,11 @@ var ROWS=7; // Number of Rows and Cols.
 var COLS=7;
 //Color Constants
 var numberOfPlayers=2;
-var green="rgba(0,255,0,1)";
-var red="rgba(255,0,0,1)";
+
+ //canvas molecules 
+        var green="rgba(0,47,255,1)";
+        var red="rgba(194,178,128,1)";
+
 var enableGameOver;
 var numberOfPlays;
 var condition;
@@ -418,7 +421,7 @@ function update(currentPlayer)
 		{
 			
 			var ele=document.getElementById("winner");
-			ele.innerHTML="Green Wins";
+			ele.innerHTML="Grey Wins";
 			document.getElementById("ResultContainer").style.display="block";
 			condition=false;
 			document.getElementById("ok").addEventListener("click",function(){init();this.parentNode.parentNode.style.display="none";})
@@ -426,7 +429,7 @@ function update(currentPlayer)
 		else if(ballCount[green]==0)
 		{
 			var ele=document.getElementById("winner1");
-			ele.innerHTML="Red Wins";
+			ele.innerHTML="Sky Blue Wins";
 			document.getElementById("ResultContainer1").style.display="block";
 			condition=false;
 			document.getElementById("ok1").addEventListener("click",function(){init();this.parentNode.parentNode.style.display="none";})
