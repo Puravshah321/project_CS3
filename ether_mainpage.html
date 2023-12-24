@@ -61,7 +61,7 @@
 		}
 	} 
 
-	
+
 //Canvas Context
 var ctx,c;
 var BOX_SIZE=100; // Each Box Size
@@ -69,8 +69,8 @@ var ROWS=7; // Number of Rows and Cols.
 var COLS=7;
 //Color Constants
 var numberOfPlayers=2;
-var green="rgba(0,255,0,1)";
-var red="rgba(255,0,0,1)";
+var green="rgba(138,43,226,1)";
+var red="rgba(190, 86, 131,1)";
 var enableGameOver;
 var numberOfPlays;
 var condition;
@@ -402,7 +402,7 @@ function update(currentPlayer)
 				box[particle.toX][particle.toY].color=particle.color;
 				burstIfFull(particle.color,particle.toX,particle.toY);
 				travellingParticles.splice(index,1);
-				
+
 			}
 			particle.curY+=particle.disp;
 		}
@@ -416,9 +416,9 @@ function update(currentPlayer)
 	{
 		if(ballCount[red]==0)
 		{
-			
+
 			var ele=document.getElementById("winner");
-			ele.innerHTML="Green Wins";
+			ele.innerHTML="Purple Wins";
 			document.getElementById("ResultContainer").style.display="block";
 			condition=false;
 			document.getElementById("ok").addEventListener("click",function(){init();this.parentNode.parentNode.style.display="none";})
@@ -426,7 +426,7 @@ function update(currentPlayer)
 		else if(ballCount[green]==0)
 		{
 			var ele=document.getElementById("winner1");
-			ele.innerHTML="Red Wins";
+			ele.innerHTML="Pink Wins";
 			document.getElementById("ResultContainer1").style.display="block";
 			condition=false;
 			document.getElementById("ok1").addEventListener("click",function(){init();this.parentNode.parentNode.style.display="none";})
@@ -436,7 +436,7 @@ function update(currentPlayer)
 }
 function drawBoard(color)
 {
-	
+
 	//ctx.setStrokeColor(color);
 	x=0,y=0;
 	for(i=1;i<=ROWS;i++)
