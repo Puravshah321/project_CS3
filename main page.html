@@ -28,6 +28,17 @@
 <canvas id="chainReaction" width="700px" height="700px">
 </canvas>
 </div>
+
+<audio id="splitSound">
+    <source src="splitsound.mp3" type="audio/mp3">
+    Your browser does not support the audio tag.
+</audio>
+
+<audio id="burstSound">
+    <source src="burstsound.mp3" type="audio/mp3">
+    Your browser does not support the audio tag.
+</audio>
+
 <audio id="sound" loop>
 	<source src=".mp3" type="audio/mp3">
 	Your browser does not support the audio tag.
@@ -36,20 +47,20 @@
 <script>
 	var sound = document.getElementById('sound');
 
-	function playsound()
+	/*function playsound()
 	{
 		sound.play();
 	}
 	function pausesound()
 	{
 		sound.pause();
-	}
-	/*document.addEventListener("click", function()
+	}*/
+	document.addEventListener("click", function()
 	 {
         playsound();
-     });*/
+     });
 
-	function togglesound()
+	/*function togglesound()
 	{
 		if(sound.paused)
 		{
@@ -59,7 +70,10 @@
 		{
             pausesound();
 		}
-	} 
+	} */
+
+	
+
 
 	
 //Canvas Context
@@ -114,9 +128,15 @@ function burstIfFull(color,x,y)
 	if(box[x][y].atoms>box[x][y].capacity)
 	{
 		box[x][y].particles=[];
+		playSplitSound();
 		burst(color,x,y);
 	}
 	return;
+}
+
+function playSplitSound() {
+    var splitSound = document.getElementById('splitSound');
+    splitSound.play();
 }
 
 function addTravellingParticles(color,fromX,fromY,x,y)
@@ -163,10 +183,17 @@ function incrementAndBurst(color,fromx,fromy,x,y)
 function incrementAndBurst2(color,x,y)
 {
 	box[x][y].atoms++;
+	playBurstSound(); 
 	pushAtom(x,y);
 	box[x][y].color=color;
 	burstIfFull(color,x,y);
 }
+
+function playBurstSound() {
+    var burstSound = document.getElementById('burstSound');
+    burstSound.play();
+}
+
 //Utility Functions for burst
 
 function burstInto2(color,x,y)  // Corner Burster
