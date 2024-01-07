@@ -32,9 +32,10 @@
 	<source src="airsound.mp3" type="audio/mp3">
 	Your browser does not support the audio tag.
 </audio>
-<button onclick="togglesound()">Sound</button>
+<!--<button onclick="togglesound()">Sound</button>-->
 <script>
-	/*var sound = document.getElementById('sound');
+	var sound = document.getElementById('sound');
+	sound.volume=0.25;
 
 	function playsound()
 	{
@@ -43,7 +44,7 @@
 	function pausesound()
 	{
 		sound.pause();
-	}*/
+	}
 	document.addEventListener("click", function()
 	 {
         playsound();
@@ -421,7 +422,7 @@ function update(currentPlayer)
 		{
 			
 			var ele=document.getElementById("winner");
-			ele.innerHTML="Grey Wins";
+			ele.innerHTML="Blue Wins";
 			document.getElementById("ResultContainer").style.display="block";
 			condition=false;
 			document.getElementById("ok").addEventListener("click",function(){init();this.parentNode.parentNode.style.display="none";})
@@ -429,7 +430,7 @@ function update(currentPlayer)
 		else if(ballCount[green]==0)
 		{
 			var ele=document.getElementById("winner1");
-			ele.innerHTML="Sky Blue Wins";
+			ele.innerHTML="Grey Wins";
 			document.getElementById("ResultContainer1").style.display="block";
 			condition=false;
 			document.getElementById("ok1").addEventListener("click",function(){init();this.parentNode.parentNode.style.display="none";})
