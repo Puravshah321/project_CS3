@@ -1,11 +1,11 @@
 a
 {
 	text-decoration:none;
-	color:rgb(30, 250, 30);
+	color:rgb(68, 100, 241);
 }
 p
 {
-	color:rgb(30,250,30);
+	color:rgb(68, 100, 241);
 }
 a:hover
 {
@@ -22,7 +22,7 @@ body
 	background-image:url("airbg.jpg");
 	background-size:cover;
 	margin: 0; 
-	color:rgb(30,250,30);
+	color:rgb(68, 100, 241);
 	font-family:arial;
 }
 #container
@@ -48,7 +48,7 @@ h1,footer
 {
 	font-family:Vendana;
 	text-align:center;	
-	color:rgb(230,250,30);
+	color:rgb(68, 100, 241);
 	font-size:100px;
 }
 footer
@@ -65,12 +65,12 @@ sub
 {
 	float:left;
 	width:200px;
-	border:1px solid rgb(230,250,30);
+	border:1px solid rgb(68, 100, 241);
 	border-bottom:none;
 	border-left:none;
 	border-top:none;
 	top:100px;
-	color:rgb(30,250,30);
+	color:rgb(68, 100, 241);
 	font-family:raleway;
 	text-align:center;
 	margin-top:20%;
@@ -80,12 +80,12 @@ sub
 {
 	padding:5px;
 	margin-top:10px;
-	border:1px solid rgb(230,250,30);
+	border:1px solid rgb(68, 100, 241);
 }
 #left div:hover
 {
 	color:black;
-	background-color:rgb(243, 244, 241);
+	background-color:rgb(154, 171, 245);
 	cursor:pointer;
 }
 #ResultContainer
@@ -165,10 +165,3 @@ sub
 {
 	cursor:pointer;
 }
-
-
-
-
-
-
-
