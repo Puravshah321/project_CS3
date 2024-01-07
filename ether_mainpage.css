@@ -1,11 +1,11 @@
 a
 {
 	text-decoration:none;
-	color:rgb(30,250,30);
+	color:rgb(138,43,226);
 }
 p
 {
-	color:rgb(30,250,30);
+	color:rgb(138,43,226);
 }
 a:hover
 {
@@ -22,7 +22,7 @@ body
 	background-image:url("etherbg.jpg");
 	background-size:cover;
 	margin: 0; 
-	color:rgb(30,250,30);
+	color:rgb(138,43,226);
 	font-family:arial;
 }
 #container
@@ -48,7 +48,7 @@ h1,footer
 {
 	font-family:Vendana;
 	text-align:center;	
-	color:rgb(230,250,30);
+	color:rgb(138,43,226);
 	font-size:100px;
 }
 footer
@@ -65,12 +65,12 @@ sub
 {
 	float:left;
 	width:200px;
-	border:1px solid rgb(230,250,30);
+	border:1px solid rgb(138,43,226);
 	border-bottom:none;
 	border-left:none;
 	border-top:none;
 	top:100px;
-	color:rgb(30,250,30);
+	color:rgb(138,43,226);
 	font-family:raleway;
 	text-align:center;
 	margin-top:20%;
@@ -80,12 +80,12 @@ sub
 {
 	padding:5px;
 	margin-top:10px;
-	border:1px solid rgb(230,250,30);
+	border:1px solid rgb(138,43,226);
 }
 #left div:hover
 {
 	color:black;
-	background-color:rgb(243, 244, 241);
+	background-color:rgb(196, 146, 242);
 	cursor:pointer;
 }
 #ResultContainer
