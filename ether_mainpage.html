@@ -32,18 +32,19 @@
 	<source src="ethersound.mp3" type="audio/mp3">
 	Your browser does not support the audio tag.
 </audio>
-<button onclick="togglesound()">Sound</button>
+<!--<button onclick="togglesound()">Sound</button>-->
 <script>
 	var sound = document.getElementById('sound');
+	sound.volume=0.25;
 
-	/*function playsound()
+	function playsound()
 	{
 		sound.play();
 	}
 	function pausesound()
 	{
 		sound.pause();
-	}*/
+	}
 	document.addEventListener("click", function()
 	 {
         playsound();
