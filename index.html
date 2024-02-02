@@ -1,0 +1,286 @@
+<html>
+<head>	
+	<title>Home Page</title>
+    <link rel="stylesheet" href="homepage.css" > 
+</head>
+
+<body  id="bgimg" >
+  
+  <!--Heading (Chain Reaction)-->
+	<p class="title_color">Chain Reaction</p>
+	
+  <div class="Lcontainer1">
+	<a class="button" href="#" style="--color:#6df5f5;">
+
+    <!--Playcard 1-->  
+    <button type="button" class="playcard1" onclick="opencard1()">Settings</button>
+	 <div class="popup1" id="popup1">
+    <form>
+      <br>
+      &#x2699; <u>Settings</u>
+      <br></br><br>
+      
+    <br>
+    <h6 style="color:black; background-color:rgba(239, 93, 239, 0.492);">Background Audio : </h6>  
+  
+  <div class="action-btns">
+    <button class="btn play">ON</button>
+    <button class="btn pause">OFF</button>
+  </div>
+
+
+    <script>
+    let playBtn = document.getElementsByClassName("play");
+    let pauseBtn = document.getElementsByClassName("pause");
+
+    let text = document.querySelector("h6");
+
+    const audio = new Audio("homepagemusic.mp3");
+
+    playBtn[0].addEventListener("click", (e) => {
+    audio.play();
+    text.innerHTML = "Audio Playing 🔊";
+    });
+
+    pauseBtn[0].addEventListener("click", (e) => {
+    audio.pause();
+    text.innerHTML = "Audio Paused";
+    });
+  </script>    
+  
+    </form>
+    <br></br><br></br>
+	 <button type="button" class="button_back" onclick="closecard1()"> <--</button>
+    </div>
+    </a>
+    
+    <script>
+		let popup1 = document.getElementById("popup1");
+		
+		function opencard1()
+    {
+		  popup1.classList.add("open-popup1");
+		}
+  
+		function closecard1()
+    {
+		  popup1.classList.remove("open-popup1");
+    }
+    </script>    
+  </div>
+
+  <div class="Lcontainer2">
+    <a class="button" href="#" style="--color: #f886ae;">
+    <!--Playcard 2-->  
+    <button type="button" class="playcard2" onclick="opencard2()">Guide</button>
+	  <div class="popup2" id="popup2">
+      <p class="Rules">
+        <b style="color:black; background-color:rgba(236, 10, 142, 0.524);"><u>HOW TO PLAY</u></b><br></br>
+        <u><b style="color:black; background-color:rgba(216, 223, 12, 0.7);">RULE NO. 1</b><br></u>
+        The gameplay takes place in an m times n (𝑚 × 𝑛) board.
+        <br></br>
+        
+        <u><b style="color:black; background-color:rgba(216, 223, 12, 0.7);">RULE NO. 2</b><br></u>
+        For each cell in the board, we define a critical mass. The critical mass is equal to
+        the number of orthogonally adjacent cells. That would be 4 for usual cells, 3 for
+        cells in the edge and 2 for cells in the corner.
+        <br></br>
+
+        
+        <u><b style="color:black; background-color:rgba(216, 223, 12, 0.7);">RULE NO. 3</b><br></u>
+        All cells are initially empty. The Red and the Green player take turns to place
+        "orbs" of their corresponding colors. The Red player can only place an (red) orb in
+        an empty cell or a cell which already contains one or more red orbs. When two
+        or more orbs are placed in he same cell, they stack up.
+        <br></br>
+
+        
+        <u><b style="color:black; background-color:rgba(216, 223, 12, 0.7);">RULE NO. 4</b><br></u>
+        When a cell is loaded with a number of orbs equal to its critical mass, the stack
+        immediately explodes. As a result of the explosion, to each of the orthogonally
+        adjacent ells, an orb is added and the initial cell looses as many orbs as its
+        critical mass. The explosions might result in overloading of an adjacent cell and
+        the chain reaction of explosion continues until every cell is stable.
+        <br></br>
+
+        
+        <u><b style="color:black; background-color:rgba(216, 223, 12, 0.7);">RULE NO. 5</b><br></u>
+        When a red cell explodes and there are green cells around, the green cells are
+        converted to red and the other rules of explosions still follow. The same rule is
+        applicable for other colors
+        <br></br>
+
+        <u><b style="color:black; background-color:rgba(216, 223, 12, 0.7);">RULE NO. 6</b><br></u>
+        The winner is the one who eliminates every other player's orbs.
+      </p>
+     <button type="button" class="button_back" onclick="closecard2()"> <-- </button>
+    </div>
+    </a>
+
+    <script>
+      let popup2 = document.getElementById("popup2");  
+      function opencard2()
+      {
+        popup2.classList.add("open-popup2");
+      }
+    
+      function closecard2()
+      {
+        popup2.classList.remove("open-popup2");
+      }
+    </script>
+  </div>
+
+
+
+  <!--PLAY BUTTON-->
+ <div class="Rcontainer1">
+    <a class="button1" href="Midpage.html" style="--color:#da1eff;">
+         <p class="playBtn">Play</p>
+          </a>
+  </div>
+
+
+  <div class="Lcontainer3">
+	  <a class="button" href="#" style="--color: #faee46;">
+    
+    <!--Playcard 3-->  
+    <button type="button" class="playcard3" onclick="opencard3()">Feedback</button>
+     <div class="popup3" id="popup3">
+  
+      <div id="panel" class="panel-container">
+       
+        <strong>How was your experience with playing this game?</strong>
+        <div class="ratings-container">
+
+          <div class="rating">
+            <img src="https://img.icons8.com/external-neu-royyan-wijaya/64/000000/external-emoji-neumojis-smiley-neu-royyan-wijaya-17.png" alt="">
+            <small>Unhappy</small>
+          </div>
+  
+          <div class="rating">
+            <img src="https://img.icons8.com/external-neu-royyan-wijaya/64/000000/external-emoji-neumojis-smiley-neu-royyan-wijaya-3.png" alt=""/>
+            <small>Neutral</small>
+          </div>
+  
+          <div class="rating active">
+            <img src="https://img.icons8.com/external-neu-royyan-wijaya/64/000000/external-emoji-neumojis-smiley-neu-royyan-wijaya-30.png" alt=""/>
+            <small>Satisfied</small>
+          </div>
+        </div>
+        <form>
+          <label for="review" style="color:black; background-color:rgba(228, 129, 22, 0.492);">Your review :</label>
+          <textarea id="review" name="review" rows="3" cols="48" placeholder="Tell us your experience while playing this game......"></textarea>
+          </form>
+          <br>
+      <button class="btn" id="send">Send Review</button>
+    </div>  
+      <script>
+        const ratings = document.querySelectorAll('.rating')
+const ratingsContainer = document.querySelector('.ratings-container')
+const sendBtn = document.querySelector('#send')
+const panel = document.querySelector('#panel')
+let selectedRating = 'Satisfied'
+
+ratingsContainer.addEventListener('click', (e) => {
+    if(e.target.parentNode.classList.contains('rating') && e.target.nextElementSibling) {
+        removeActive()
+        e.target.parentNode.classList.add('active')
+        selectedRating = e.target.nextElementSibling.innerHTML
+    } else if(
+        e.target.parentNode.classList.contains('rating') &&
+        e.target.previousSibling &&
+        e.target.previousElementSibling.nodeName === 'IMG'
+    ) {
+        removeActive()
+        e.target.parentNode.classList.add('active')
+        selectedRating = e.target.innerHTML
+    }
+
+})
+
+sendBtn.addEventListener('click', (e) => {
+    panel.innerHTML = `
+        <i class="fas fa-heart"></i>
+        <br>
+        <strong>Feedback: ${selectedRating}</strong>
+        <h6>Thank you for responding we'll take your feedback into consideration! </h6>
+    `
+})
+
+function removeActive() {
+    for(let i = 0; i < ratings.length; i++) {
+        ratings[i].classList.remove('active')
+    }
+}
+      </script>
+      
+    <button type="button" class="button_back" onclick="closecard3()"> <-- </button>
+    </div>
+    </a>
+    <script>
+		let popup3 = document.getElementById("popup3");
+		
+		function opencard3()
+    {
+		  popup3.classList.add("open-popup3");
+		}
+  
+		function closecard3()
+    {
+		  popup3.classList.remove("open-popup3");
+    }
+    </script>    
+</div>
+
+  <div class="Lcontainer4">
+    <a class="button" href="#" style="--color: #8fff6a;">
+
+    <!--Playcard 4-->  
+    <button type="button" class="playcard4" onclick="opencard4()">Sign up</button>
+        <div class="popup4" id="popup4">
+          <form>
+            <fieldset>
+              <legend><i><b><u>Sign Up</u></b></i></legend>
+              <br>
+            <label for="fname" class="feeback" >Username: </label>
+            <input type="text" placeholder="Enter your name" ><br><br>
+              
+            <label for="Birthday" class="feeback" >Date Of Birth: </label>
+            <input type="date" id="birthday" placeholder="Enter Your birthday"><br><br>
+
+            <label for="email">Email:  </label>
+            <input type="email" placeholder="Enter Email"><br><br>
+    
+            <label for="lname">Password:  </label>
+            <input type="password" placeholder="Set strong password"><br><br>
+            
+            <input type="checkbox" >
+            <label for="check" style="color:black; font-family: algerian; font-size: 15px;" > 
+            By creating an account you agree to our <u style=" color:rgb(3, 92, 246); " >Terms & conditions</u><br></label>
+            
+          </fieldset>  
+          <button class="btn" id="send">Register</button>
+          </form> 
+          <br>
+        <button type="button" class="button_back" onclick="closecard4()"> <-- </button>
+    </div>
+    </a>
+
+    <script>
+      let popup4 = document.getElementById("popup4");
+      
+      function opencard4()
+      {
+        popup4.classList.add("open-popup4");
+      }
+    
+      function closecard4()
+      {
+        popup4.classList.remove("open-popup4");
+      }
+    </script>   
+    </div>     
+</div>
+</body>
+</html>
