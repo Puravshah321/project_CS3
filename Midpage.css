@@ -27,24 +27,26 @@ p
     font-size:100px;
 }
 
+/*for background video*/
 #myVideo 
 {
     position: fixed;
     right: 0;
     bottom: 0;
-    min-width: 10px; 
-    min-height: 10px;
     opacity: 0.2;
 }
+
+/*For select element statement*/
 .choose
 {
     display: flex;
 	justify-content: center;
 	align-items: center;
-    color:white;
+    color:rgb(234, 254, 17);
     font-size: 20px;
 }
 
+/*For 3d rotation*/
 #flex
 {
     display: flex;
@@ -65,6 +67,7 @@ p
 }
 
 /* Adding keyframes for animation */
+/* For maintaining speed */
 @keyframes animate {
 	0% {
 		transform: perspective(1200px) rotateY(0deg);
@@ -83,8 +86,7 @@ p
 	}
 }
 
-/* Adding CSS to all the span 
-	tags for animation */
+/* Adding CSS to all the span tags for animation */
 .box span {
 	position: absolute;
 	top: 0;
@@ -93,6 +95,7 @@ p
 	height: 100%;
 	transform-origin: center;
 	transform-style: preserve-3d;
+	/* For maintaining the gap between */
 	transform: 
 	rotateY(calc(var(--i) * 70deg)) translateZ(400px);
 	-webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #0004);
